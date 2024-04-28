@@ -1,9 +1,15 @@
 /* styles.css */
+
+/* Reset default browser styles */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling for the page */
 body {
     font-family: Arial, sans-serif;
     background-color: #f1f1f1;
-    margin: 0;
-    padding: 0;
 }
 
 .container {
@@ -17,8 +23,50 @@ body {
 
 h1 {
     color: #333;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 p {
     color: #666;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Style the header */
+header {
+    background-color: #b6b83a;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Style the main content sections */
+main {
+    padding: 20px;
+}
+
+.race-schedule, .driver-profiles {
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Style the footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #f9f9f9;
+    color: #777;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
 }
