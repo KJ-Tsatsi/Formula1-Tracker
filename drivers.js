@@ -1,4 +1,4 @@
-const driverStandings = "https://ergast.com/api/f1/current/driverStandings";
+const driverStandings = "https://ergast.com/api/f1/current/driverStandings.json";
 
 async function fetchApi(url) {
     const response = await fetch(url);
@@ -13,10 +13,14 @@ async function fetchApi(url) {
 async function getStandings(url) {
     try {
         const data = await fetchApi(url);
+
+        const drivers = data.MRData.StandingsTable.StandingsLists[0].DriverStandings;
         // const standings
-        console.log(data);
+        // console.log(data);
+        console.log(drivers);
     } catch (error) {
         console.error('There was an error with the fetch operation:', error);
     }
 }
 
+getStandings(driverStandings);
