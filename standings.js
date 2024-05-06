@@ -19,9 +19,6 @@ async function getDriverStandings(url) {
         const data = await fetchApi(url);
 
         const drivers = data.MRData.StandingsTable.StandingsLists[0].DriverStandings;
-        // const standings
-        // console.log(data);
-        console.log(drivers);
         return drivers;
     } catch (error) {
         console.error('There was an error with the fetch operation:', error);
@@ -34,7 +31,6 @@ async function getConstructorStandings(url) {
         const data = await fetchApi(url);
 
         const constructors = data.MRData.StandingsTable.StandingsLists[0].ConstructorStandings;
-        console.log(constructors);
         return constructors;
     } catch (error) {
         console.error('There was an error with the fetch operation:', error);
