@@ -19,6 +19,7 @@ async function getDriverStandings(url) {
         const data = await fetchApi(url);
 
         const drivers = data.MRData.StandingsTable.StandingsLists[0].DriverStandings;
+        console.log(drivers);
         return drivers;
     } catch (error) {
         console.error('There was an error with the fetch operation:', error);
@@ -80,7 +81,10 @@ getDriverStandings(driverStandings).then(drivers => {
         row.appendChild(positionCell);
 
         const nameCell = document.createElement('td');
-        nameCell.textContent = driver.Driver.givenName +' '+driver.Driver.familyName;
+        const nameLink = document.createElement('a');
+        nameLink.textContent = driver.Driver.givenName +' '+driver.Driver.familyName;
+        nameLink.href = `driver.html?driverId=${driver.Driver.driverId}`    ;
+        nameCell.appendChild(nameLink);
         row.appendChild(nameCell);
 
         const pointsCell = document.createElement('td');
