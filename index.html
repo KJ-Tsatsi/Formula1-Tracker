@@ -8,11 +8,13 @@
 </head>
 <body>
     <header>
-        <h1>Formula 1 Results Tracker</h1>
-        <p>Stay up-to-date with the latest race results, standings, and more.</p>
+        <div class="container">
+            <h1>Formula 1 Results Tracker</h1>
+            <p>Stay up-to-date with the latest race results, standings, and more.</p>
+        </div>
     </header>
     <main>
-        <section class="race-schedule">
+        <section class="race-schedule container">
             <h2>Last Grand Prix</h2>
             <p id="last-race"></p>
             <p id="race-date"></p>
@@ -20,24 +22,22 @@
                 <h2>Last Race Winner</h2>
                 <p id="last-winner"></p>
             </div>
-            
         </section>
-        <section class="driver-standings">
+        <section class="driver-standings container">
             <h2>Driver Standings</h2>
             <table id="drivers-table"></table>
-
         </section>
-        <section class="constructor-standings">
+        <section class="constructor-standings container">
             <h2>Constructor Standings</h2>
             <table id="constructor-table"></table>
-
         </section>
     </main>
     <footer>
-        <p>© 2024 Formula 1 Results Tracker</p>
+        <div class="container">
+            <p>© 2024 Formula 1 Results Tracker</p>
+        </div>
     </footer>
     <script src="app/script.js"></script>
     <script src="app/standings.js"></script>
-    <!-- <script src="controller.js"></script> -->
 </body>
 </html>
